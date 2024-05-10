@@ -1,0 +1,13 @@
+class Solution{
+public:
+    long long nPr(int n, int r){
+        // code here
+        int i;
+        long long res=1;
+        for(i=n;i>n-r;i--)
+        {
+            res=res*i;
+        }
+        return res;
+    }
+}
