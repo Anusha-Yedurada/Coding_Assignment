@@ -1,18 +1,17 @@
-class Solution {
-  public:
-    string armstrongNumber(int n){
-        // code here
-        int i,k,a,b,c,sum=0;
-        k=n;
-        while(k!=0)
-        {
-            a=k%10;
-            sum=sum+pow(a,3);
-            k=k/10;
-        }
-        if(sum==n)
-            return "Yes";
-        else
-            return "No";
-    }
+class Solution
+{
+	public:
+		long long int reverse_digit(long long int n)
+		{
+		    // Code here
+		    long long int r;
+		    long long int rev=0;
+		    while(n!=0)
+		    {
+		        r=n%10;
+		        rev=rev*10+r;
+		        n=n/10;
+		    }
+		    return rev;
+		}
 };
