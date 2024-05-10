@@ -1,0 +1,10 @@
+class Solution {
+  public:
+    double simpleInterest(int P, int R, int T) {
+        // code here
+        double p=P,t=T, r=R,amount;
+        amount=(p*t*r)/100;
+        return amount;
+        
+    }
+};
