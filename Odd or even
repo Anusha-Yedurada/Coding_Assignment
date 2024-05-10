@@ -1,7 +1,10 @@
 class Solution{   
 public:
-    int addition(int A, int B){
-        // code here 
-        return  B + A;
-    }
+    string oddEven(int N){
+        // code here
+        if(N%2==0)
+            return "even";
+        else
+            return "odd";
+    }
 };
