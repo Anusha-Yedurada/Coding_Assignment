@@ -1,0 +1,33 @@
+class Solution {
+  public:
+    long long isSumPalindrome(long long n){
+        // code here
+        int r,rev=0,sum=n,k=n,count=0;
+        while(n!=0)
+        {
+            r=n%10;
+            rev=rev*10+r;
+            n=n/10;
+        }
+        if(rev==k)
+            return k;
+        n=k;
+        while(count<=5)
+        {
+            rev=0;
+            while(n!=0)
+            {
+                r=n%10;
+                rev=rev*10+r;
+                n=n/10;
+            }
+            if(sum==rev)
+                return sum;
+            sum=sum+rev;
+            n=sum;
+            count++;
+        }
+        return -1;
+        
+    }
+};
